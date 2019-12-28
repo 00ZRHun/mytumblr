@@ -1,8 +1,10 @@
 <%# <h1>This is the post controller index action page"</h1> %>
-<h1>This is the index page that I just created</h1>
-<% @posts.each do |post| %>
-    <div class="post_wrapper">
-        <h2 class="title"><%= link_to post.title, post %></h2>
-        <p class="date"><%= time_ago_in_words(post.created_at) %>ago</p>
-    </div>
-<% end %>
+<div id="page_wrapper">
+    <h1>This is the index page that I just created</h1>
+    <% @posts.each do |post| %>
+        <div class="post_wrapper">
+            <h2 class="title"><%= link_to post.title, post %></h2>
+            <p class="date"><%= time_ago_in_words(post.created_at) %>ago</p>
+        </div>
+    <% end %>
+</div>
