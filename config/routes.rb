@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   root "posts#index"   # post controller index action  
   
+  get '/about', to: 'pages#about'
 end
