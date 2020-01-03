@@ -50,12 +50,14 @@
     
 
 <%# for error debugging purpose %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p class="notice"><%# notice %></p>
+    <p class="alert"><%# alert %></p>
 
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert") %>
-    <% end %>
+    <div id="page_wrapper">
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert") %>
+      <% end %>
+    </div>
 
     <%= yield %>
     </div>
